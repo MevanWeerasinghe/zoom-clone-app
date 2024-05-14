@@ -11,7 +11,8 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   const sidebarLinks = sideBarLinks.map((link) => {
-    const isActive = pathname === link.path; // || pathname.startsWith(link.path);
+    const isActive =
+      pathname === link.path || pathname.startsWith(`${link.path}/`);
     return (
       <Link
         key={link.path}
@@ -34,7 +35,7 @@ const Sidebar = () => {
   return (
     <section
       className="flex sticky left-0 top-0 h-screen w-fit flex-col justify-between bg-dark-1 
-        p-6 pt-28 text-white lg:w-[264px]"
+        p-6 pt-28 text-white max-sm:hidden lg:w-[264px]"
     >
       <div className="flex flex-1 flex-col">{sidebarLinks}</div>
     </section>
