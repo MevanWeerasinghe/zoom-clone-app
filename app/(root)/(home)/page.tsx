@@ -1,3 +1,4 @@
+import MeetingTypeList from "@/components/MeetingTypeList";
 import React from "react";
 
 const Home = () => {
@@ -7,12 +8,6 @@ const Home = () => {
     hour: "2-digit",
     minute: "2-digit",
   });
-  // const date = now.toLocaleDateString("en-US", {
-  //   weekday: "long",
-  //   month: "long",
-  //   day: "numeric",
-  //   year: "numeric",
-  // });
 
   const date = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
     now
@@ -20,6 +15,7 @@ const Home = () => {
 
   return (
     <div className="flex size-full flex-col gap-10 text-white">
+      {/* top secton */}
       <div className="h-[300px] w-full rounded-[20px] bg-hero bg-cover">
         <div className="flex h-full flex-col justify-between max-md:px-6 max-md:py-8 md:p-11">
           <h2 className="glassmorphism max-w-[270px] rounded py-2 text-center text-base font-normal">
@@ -31,6 +27,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* Meeting Card list */}
+      <MeetingTypeList />
     </div>
   );
 };
