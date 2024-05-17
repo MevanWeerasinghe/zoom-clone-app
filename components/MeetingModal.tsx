@@ -1,12 +1,5 @@
 import React, { ReactNode } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
@@ -44,7 +37,7 @@ const MeetingModal = ({
               <Image src={image} alt={title} width={68} height={68} />
             </div>
           )}
-          <h1 className={cn("text-3xl font-bold leading-[42px]", style)}>
+          <h1 className={cn("text-2xl font-bold leading-[42px]", style)}>
             {title}
           </h1>
           {children}
