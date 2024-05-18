@@ -16,7 +16,7 @@ export const useGetCalls = () => {
 
       try {
         const { calls } = await client.queryCalls({
-          sort: [{ field: "created_at", direction: -1 }],
+          sort: [{ field: "starts_at", direction: -1 }],
           filter_conditions: {
             starts_at: { $exists: true },
             $or: [
@@ -40,12 +40,12 @@ export const useGetCalls = () => {
   const now = new Date();
 
   //destructure the each call object twise to get the startedAt and endedAt
-  const endedCalls = calls.filter(({ state: { startedAt, endedAt } }: Call) => {
-    return (startedAt && new Date(startedAt) < now) || !!endedAt;
+  const endedCalls = calls?.filter(({ state: { startsAt, endedAt } }: Call) => {
+    return (startsAt && new Date(startsAt) < now) || !!endedAt;
   });
 
-  const upcomingCalls = calls.filter(({ state: { startedAt } }: Call) => {
-    return startedAt && new Date(startedAt) > now;
+  const upcomingCalls = calls?.filter(({ state: { startsAt } }: Call) => {
+    return startsAt && new Date(startsAt) > now;
   });
 
   return { endedCalls, upcomingCalls, callRecordings: calls, isLoading };

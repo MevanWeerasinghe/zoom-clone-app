@@ -17,14 +17,14 @@ interface MeetingCardProps {
 }
 
 const MeetingCard = ({
-  icon,
   title,
   date,
+  icon,
   isPreviousMeeting,
   buttonIcon1,
+  buttonText,
   handleClick,
   link,
-  buttonText,
 }: MeetingCardProps) => {
   return (
     <div className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
@@ -32,7 +32,7 @@ const MeetingCard = ({
         <Image src={icon} alt="upcoming" width={28} height={28} />
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1>
+            <h1 className="text-xl font-bold text-sky-1">{title}</h1>
             <p className="text-base font-normal">{date}</p>
           </div>
         </div>
