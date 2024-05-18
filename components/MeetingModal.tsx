@@ -29,7 +29,6 @@ const MeetingModal = ({
 }: MeetingModalPops) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogTrigger>Open</DialogTrigger>
       <DialogContent className="flex w-full max-w-[520px] flex-col border-none gap-6 bg-dark-1 text-white px-6 py-8">
         <div className="flex flex-col gap-6">
           {image && (

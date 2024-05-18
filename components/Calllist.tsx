@@ -41,9 +41,6 @@ const Calllist = ({ type }: { type: "upcoming" | "ended" | "recording" }) => {
     }
   };
 
-  // const callData = await Promise.all(callRecordings.map(async (meeting) => {
-  // return await meeting.queryRecordings();
-
   useEffect(() => {
     const fetchRecordings = async () => {
       try {
@@ -84,7 +81,7 @@ const Calllist = ({ type }: { type: "upcoming" | "ended" | "recording" }) => {
               title={
                 (meeting as Call).state?.custom.description.substring(0, 25) ||
                 (meeting as CallRecording).filename.substring(0, 25) ||
-                "No description"
+                "Personal Meeting"
               }
               date={
                 (meeting as Call).state?.startsAt?.toLocaleString() ||
