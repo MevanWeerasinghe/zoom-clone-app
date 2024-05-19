@@ -79,13 +79,13 @@ const Calllist = ({ type }: { type: "upcoming" | "ended" | "recording" }) => {
             <MeetingCard
               key={(meeting as Call).id}
               title={
-                (meeting as Call).state?.custom.description.substring(0, 25) ||
-                (meeting as CallRecording).filename.substring(0, 25) ||
+                (meeting as Call).state?.custom?.description.substring(0, 25) ||
+                (meeting as CallRecording).filename?.substring(0, 25) ||
                 "Personal Meeting"
               }
               date={
                 (meeting as Call).state?.startsAt?.toLocaleString() ||
-                (meeting as CallRecording).start_time.toLocaleString()
+                (meeting as CallRecording).start_time?.toLocaleString()
               }
               icon={
                 type === "ended"
