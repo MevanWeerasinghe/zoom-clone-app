@@ -20,13 +20,13 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: "#1C1F2E",
-          2: "#161925",
-          3: "#252A41",
-          4: "#1E2757",
+          1: "#242423",
+          2: "#373635",
+          3: "#575656",
+          4: "#1A1A14",
         },
         blue: {
-          1: "#0E78F9",
+          1: "#0B61CA",
         },
         sky: {
           1: "#C9DDFF",
@@ -34,17 +34,17 @@ const config = {
           3: "#F5FCFF",
         },
         orange: {
-          1: "#FF742E",
+          1: "#C8083E", //red
         },
         purple: {
-          1: "#830EF9",
+          1: "#136F63", //green
         },
         yellow: {
-          1: "#F9A90E",
+          1: "#823EB5", //puple
         },
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')",
+        hero: "url('/images/hero-background.jpg')",
       },
       keyframes: {
         "accordion-down": {

@@ -6,16 +6,16 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <div className="fixed flex justify-between w-full z-50 bg-dark-1 px-6 py-4 lg:px-10">
+    <div className="fixed flex justify-between w-full z-50 bg-dark-4 px-6 py-4 lg:px-10">
       <Link href="/" className="flex items-center gap-1">
         <Image
-          src="/icons/logo.svg"
+          src="/icons/logo.png"
           alt="logo"
           width={32}
           height={32}
           className="max-sm:size-10"
         />
-        <h1 className="text-xl font-extrabold text-white max-sm:hidden">
+        <h1 className="text-xl font-extrabold text-white max-sm:hidden pl-1">
           Eventify
         </h1>
       </Link>

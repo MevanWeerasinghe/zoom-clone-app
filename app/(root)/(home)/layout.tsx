@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Eventify is a video conferencing app built with Stream Chat and Stream Video SDKs.",
   icons: {
-    icon: "/icons/Logo.svg",
+    icon: "/icons/Logo.png",
   },
 };
 
